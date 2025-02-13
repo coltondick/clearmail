@@ -1,0 +1,20 @@
+---
+services:
+  clearmail:
+    build: .
+    container_name: clearmail
+    restart: always
+    volumes:
+      - /path/to/local/config.yml:/app/config.yml
+    environment:
+      - TZ=${TZ}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - IMAP_USER=${IMAP_USER}
+      - IMAP_PASSWORD=${IMAP_PASSWORD}
+      - IMAP_HOST=imap.gmail.com
+      - IMAP_PORT=993
+      - CONFIG_YML_PATH=/app/config.yml
+    # ports:
+    #   - 3003:3003
+    security_opt:
+      - no-new-privileges:true
