@@ -122,6 +122,7 @@ IMAP_USER=yourname@gmail.com
 IMAP_PASSWORD=your_app_password_or_regular_password_here
 IMAP_HOST=imap.gmail.com
 IMAP_PORT=993
+CONFIG_YML_PATH=./config.yml
 ```
 
 ### Step 4: Run the Process Locally (Node.js)
