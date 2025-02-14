@@ -8,7 +8,7 @@ WORKDIR /app/src
 RUN apk add --no-cache git openssl
 
 # Clone the repository during build time (this ensures it always fetches the latest)
-RUN git clone https://github.com/coltondick/clearmail.git /app/src
+RUN git clone https://github.com/coltondick/clearmail.git /app/src || true && cd /app/src && git pull origin main
 
 # Install dependencies
 RUN npm install
